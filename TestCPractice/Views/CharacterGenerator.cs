@@ -17,7 +17,7 @@ namespace TestCPractice.Views
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            if (MainTabControl.SelectedIndex > MainTabControl.TabPages.Count -1)
+            if (MainTabControl.SelectedIndex < MainTabControl.TabPages.Count -1)
             {
                 MainTabControl.SelectedIndex++;
             }
