@@ -30,8 +30,10 @@ namespace TestCPractice.Objects
 
         CharacterPortfolio()
         {
+            //Construction
             this.Skills = new List<Skill>();
             this.Identity = new Identity();
+            
 
 
 
