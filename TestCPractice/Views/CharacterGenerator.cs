@@ -14,5 +14,22 @@ namespace TestCPractice.Views
         {
             InitializeComponent();
         }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            if (MainTabControl.SelectedIndex > MainTabControl.TabPages.Count -1)
+            {
+                MainTabControl.SelectedIndex++;
+            }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            if(MainTabControl.SelectedIndex != 0)
+            {
+                MainTabControl.SelectedIndex--;
+            }
+            
+        }
     }
 }

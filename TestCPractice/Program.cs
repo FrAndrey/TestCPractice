@@ -10,7 +10,7 @@ namespace TestCPractice
     public static class Program
     {
         //temporary
-       public static  MasterForm masterForm;
+       public static  CharacterGenerator characterForm;
 
 
         /// <summary>
@@ -22,13 +22,13 @@ namespace TestCPractice
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            masterForm = new MasterForm();
+            characterForm = new CharacterGenerator();
 
 
 
 
 
-            Application.Run(masterForm);
+            Application.Run(characterForm);
         }
     }
 }
