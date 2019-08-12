@@ -344,10 +344,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StrengthDataLabel.BackColor = System.Drawing.Color.White;
             this.StrengthDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this.StrengthDataLabel, 3);
             this.StrengthDataLabel.Location = new System.Drawing.Point(261, 0);
             this.StrengthDataLabel.Name = "StrengthDataLabel";
-            this.StrengthDataLabel.Size = new System.Drawing.Size(475, 51);
+            this.StrengthDataLabel.Size = new System.Drawing.Size(104, 51);
             this.StrengthDataLabel.TabIndex = 0;
             this.StrengthDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -358,10 +357,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DexDataLabel.BackColor = System.Drawing.Color.White;
             this.DexDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this.DexDataLabel, 3);
             this.DexDataLabel.Location = new System.Drawing.Point(261, 51);
             this.DexDataLabel.Name = "DexDataLabel";
-            this.DexDataLabel.Size = new System.Drawing.Size(475, 51);
+            this.DexDataLabel.Size = new System.Drawing.Size(104, 51);
             this.DexDataLabel.TabIndex = 0;
             this.DexDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -372,10 +370,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EnduranceDataLabel.BackColor = System.Drawing.Color.White;
             this.EnduranceDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this.EnduranceDataLabel, 3);
             this.EnduranceDataLabel.Location = new System.Drawing.Point(261, 102);
             this.EnduranceDataLabel.Name = "EnduranceDataLabel";
-            this.EnduranceDataLabel.Size = new System.Drawing.Size(475, 51);
+            this.EnduranceDataLabel.Size = new System.Drawing.Size(104, 51);
             this.EnduranceDataLabel.TabIndex = 0;
             this.EnduranceDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -386,10 +383,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IntellectDataLabel.BackColor = System.Drawing.Color.White;
             this.IntellectDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this.IntellectDataLabel, 3);
             this.IntellectDataLabel.Location = new System.Drawing.Point(261, 153);
             this.IntellectDataLabel.Name = "IntellectDataLabel";
-            this.IntellectDataLabel.Size = new System.Drawing.Size(475, 51);
+            this.IntellectDataLabel.Size = new System.Drawing.Size(104, 51);
             this.IntellectDataLabel.TabIndex = 0;
             this.IntellectDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -400,10 +396,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EducationDataLabel.BackColor = System.Drawing.Color.White;
             this.EducationDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this.EducationDataLabel, 3);
             this.EducationDataLabel.Location = new System.Drawing.Point(261, 204);
             this.EducationDataLabel.Name = "EducationDataLabel";
-            this.EducationDataLabel.Size = new System.Drawing.Size(475, 51);
+            this.EducationDataLabel.Size = new System.Drawing.Size(104, 51);
             this.EducationDataLabel.TabIndex = 0;
             this.EducationDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -414,10 +409,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SocialDataLabel.BackColor = System.Drawing.Color.White;
             this.SocialDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this.SocialDataLabel, 3);
             this.SocialDataLabel.Location = new System.Drawing.Point(261, 255);
             this.SocialDataLabel.Name = "SocialDataLabel";
-            this.SocialDataLabel.Size = new System.Drawing.Size(475, 51);
+            this.SocialDataLabel.Size = new System.Drawing.Size(104, 51);
             this.SocialDataLabel.TabIndex = 0;
             this.SocialDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
