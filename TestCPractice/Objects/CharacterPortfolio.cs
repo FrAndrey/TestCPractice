@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 /*
 Andrey Paramonov
 ID: 301038409
-Descr: This is a main contrainer class for an application
+Descr: This is a main container class for an application
 */
 namespace TestCPractice.Objects
 {
