@@ -6,13 +6,18 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-
+/*
+ * Andrey Paramonov
+ * ID: 301038409
+ * This is a Main Form for all the application Features
+ * */
 namespace TestCPractice.Views
 {
     public partial class CharacterGenerator : TestCPractice.Views.MasterForm
     {
         List<string> FirstNameList = new List<string>();
         List<string> LastNameList = new List<string>();
+        List<string> SkillList = new List<string>();
 
         public CharacterGenerator()
         {
@@ -80,38 +85,16 @@ namespace TestCPractice.Views
 
             FirstNameDataLabel.Text = FirstNameList[randIndexForFirstName];
             LastNameDataLabel.Text = LastNameList[randIndexForLastName];
+            Program.identity 
 
 
         }
 
         private void SaveToolStripButton_Click(object sender, EventArgs e)
         {
-            using (StreamWriter outputStream = new StreamWriter(
-             File.Open("CharacterGen.txt", FileMode.Create)))
-            {
-               // outputStream.WriteLine(Program.)
-
-
-
-            }
+         
             MessageBox.Show("File saved succesfully","Saving",MessageBoxButtons.OK);
-        }
-
-        private void HelpToolStripButton_Click(object sender, EventArgs e)
-        {
-            Program.aboutBox.ShowDialog();
-        }
-
-        private void OpenToolStripButton_Click(object sender, EventArgs e)
-        {
-            using (StreamReader inputStream = new StreamReader(
-           File.Open("CharacterGen.txt", FileMode.Open)))
-            {
-               // inputStream.ReadLine\
-
-
-
-            }
+     
         }
 
         private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
@@ -137,6 +120,69 @@ namespace TestCPractice.Views
             Program.character.Intellect = IntellectDataLabel.ToString();
             Program.character.Education = EducationDataLabel.ToString();
             Program.character.SocialStanding = SocialDataLabel.ToString();
+        }
+        private void LoadSkills()
+        {
+
+            using (StreamReader inputSkillsStream = new StreamReader(
+     File.Open("skills.txt", FileMode.Open)))
+            {
+                string line;
+                int counter = 0;
+                while ((line = inputSkillsStream.ReadLine()) != null)
+                {
+                    SkillList.Add(line);
+                    counter++;
+                }
+                inputSkillsStream.Close();
+                inputSkillsStream.Dispose();
+            }
+
+
+        }
+        private void GenerateSkillsButton_Click(object sender, EventArgs e)
+        {
+            Random rand1 = new Random();
+            Random rand2 = new Random();
+            Random rand3 = new Random();
+            Random rand4 = new Random();
+            FirstDataLabel.Text = SkillList[rand1.Next(0, SkillList.Count - 1)];
+            SecondDataLabel.Text = SkillList[rand2.Next(0, SkillList.Count - 1)];
+            ThirdDataLabel.Text = SkillList[rand3.Next(0, SkillList.Count - 1)];
+            FourthDataLabel.Text = SkillList[rand4.Next(0, SkillList.Count - 1)];
+        }
+
+        private void CharacterGenerator_Load(object sender, EventArgs e)
+        {
+            LoadSkills();
+        
+
+
+        }
+
+        private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FirstSkillLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SecondSkillLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThirdSkillLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FourthSkillLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

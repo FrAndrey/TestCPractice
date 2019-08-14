@@ -15,6 +15,7 @@ namespace TestCPractice
        public static  CharacterGenerator characterForm;
         public static AboutBox aboutBox;
         public static CharacterPortfolio character;
+        public static Identity identity;
         
        
 
