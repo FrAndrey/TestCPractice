@@ -11,6 +11,7 @@ namespace TestCPractice
     {
         //temporary
        public static  CharacterGenerator characterForm;
+        public static AboutBox aboutBox;
 
 
         /// <summary>
@@ -23,6 +24,7 @@ namespace TestCPractice
             Application.SetCompatibleTextRenderingDefault(false);
 
             characterForm = new CharacterGenerator();
+            aboutBox = new AboutBox();
 
 
 

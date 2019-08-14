@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -37,6 +38,23 @@ namespace TestCPractice.Views
             Random rand = new Random();
             //Here instead of tabcontrol should be numberOfLines of Names
             int randomIndex = rand.Next(0, MainTabControl.TabPages.Count - 1); 
+        }
+
+        private void SaveToolStripButton_Click(object sender, EventArgs e)
+        {
+            using (StreamWriter outputString = new StreamWriter(
+             File.Open("CharacterGen.txt", FileMode.Create)))
+            {
+
+
+
+
+            }
+        }
+
+        private void HelpToolStripButton_Click(object sender, EventArgs e)
+        {
+            Program.aboutBox.ShowDialog();
         }
     }
 }

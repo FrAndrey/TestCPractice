@@ -445,7 +445,7 @@
             this.Character.Location = new System.Drawing.Point(4, 24);
             this.Character.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Character.Name = "Character";
-            this.Character.Size = new System.Drawing.Size(584, 327);
+            this.Character.Size = new System.Drawing.Size(587, 313);
             this.Character.TabIndex = 2;
             this.Character.Text = "Character Sheet";
             this.Character.UseVisualStyleBackColor = true;
@@ -481,6 +481,7 @@
             this.saveToolStripButton.Name = "saveToolStripButton";
             this.saveToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.saveToolStripButton.Text = "&Save";
+            this.saveToolStripButton.Click += new System.EventHandler(this.SaveToolStripButton_Click);
             // 
             // toolStripSeparator3
             // 
@@ -495,6 +496,7 @@
             this.helpToolStripButton.Name = "helpToolStripButton";
             this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton.Text = "He&lp";
+            this.helpToolStripButton.Click += new System.EventHandler(this.HelpToolStripButton_Click);
             // 
             // fileToolStripMenuItem
             // 
