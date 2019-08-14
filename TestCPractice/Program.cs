@@ -5,14 +5,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestCPractice.Views;
 using System.Collections.Generic;
+using TestCPractice.Objects;
 
 namespace TestCPractice
 {
-    public static class Program
+    public  class Program
     {
         //temporary
        public static  CharacterGenerator characterForm;
         public static AboutBox aboutBox;
+        public static CharacterPortfolio character;
+        
+       
 
 
         /// <summary>
@@ -26,7 +30,7 @@ namespace TestCPractice
 
             characterForm = new CharacterGenerator();
             aboutBox = new AboutBox();
-
+            
 
 
 

@@ -71,11 +71,13 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.MainTabControl.SuspendLayout();
             this.Identity.SuspendLayout();
             this.IdentityTableLayout.SuspendLayout();
             this.Abilities.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.Skills.SuspendLayout();
             this.MainToolStrip.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -444,6 +446,7 @@
             // 
             // Skills
             // 
+            this.Skills.Controls.Add(this.tableLayoutPanel2);
             this.Skills.Location = new System.Drawing.Point(4, 24);
             this.Skills.Margin = new System.Windows.Forms.Padding(4);
             this.Skills.Name = "Skills";
@@ -592,6 +595,23 @@
             this.MainMenuStrip.TabIndex = 2;
             this.MainMenuStrip.Text = "menuStrip1";
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 7);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(565, 303);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
             // CharacterGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -610,6 +630,7 @@
             this.IdentityTableLayout.ResumeLayout(false);
             this.Abilities.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.Skills.ResumeLayout(false);
             this.MainToolStrip.ResumeLayout(false);
             this.MainToolStrip.PerformLayout();
             this.MainMenuStrip.ResumeLayout(false);
@@ -663,5 +684,6 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip MainMenuStrip;
         private System.Windows.Forms.Button GenerateAbilitiesButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }
