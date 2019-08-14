@@ -40,7 +40,7 @@ namespace TestCPractice.Views
         private void LoadNames()
         {  
             using (StreamReader inputStream = new StreamReader(
-         File.Open("Data/firstNames.txt", FileMode.Open)))
+         File.Open("firstNames.txt", FileMode.Open)))
             {
                 string line;
                 int counter = 0;
@@ -54,7 +54,7 @@ namespace TestCPractice.Views
             }
 
             using (StreamReader inputLStream = new StreamReader(
-     File.Open("Data/lastNames.txt", FileMode.Open)))
+     File.Open("lastNames.txt", FileMode.Open)))
             {
                 string line;
                 int counter = 0;
