@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TestCPractice")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Be a Hero")]
+[assembly: AssemblyDescription("This is an application for generating a character and assigning to him random skills")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TestCPractice")]
+[assembly: AssemblyCompany("Andrey's cmpny")]
+[assembly: AssemblyProduct("RPG")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
