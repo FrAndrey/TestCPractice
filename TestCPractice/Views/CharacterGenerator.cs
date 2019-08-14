@@ -11,9 +11,14 @@ namespace TestCPractice.Views
 {
     public partial class CharacterGenerator : TestCPractice.Views.MasterForm
     {
+        List<string> FirstNameList = new List<string>();
+        List<string> LastNameList = new List<string>();
+
         public CharacterGenerator()
         {
             InitializeComponent();
+
+
         }
 
         private void NextButton_Click(object sender, EventArgs e)
@@ -32,12 +37,52 @@ namespace TestCPractice.Views
             }
             
         }
+        private void LoadNames()
+        {  
+            using (StreamReader inputStream = new StreamReader(
+         File.Open("Data/firstNames.txt", FileMode.Open)))
+            {
+                string line;
+                int counter = 0;
+                while ((line = inputStream.ReadLine()) != null)
+                {
+                    FirstNameList.Add(line);
+                    counter++;
+                }
+                inputStream.Close();
+                inputStream.Dispose();        
+            }
+
+            using (StreamReader inputLStream = new StreamReader(
+     File.Open("Data/lastNames.txt", FileMode.Open)))
+            {
+                string line;
+                int counter = 0;
+                while ((line = inputLStream.ReadLine()) != null)
+                {
+                    LastNameList.Add(line);
+                    counter++;
+                }
+                inputLStream.Close();
+                inputLStream.Dispose();
+            }
+        }
+
 
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
-            Random rand = new Random();
-            //Here instead of tabcontrol should be numberOfLines of Names
-            int randomIndex = rand.Next(0, MainTabControl.TabPages.Count - 1); 
+            // int randomIndex = rand.Next(0, MainTabControl.TabPages.Count - 1); 
+
+            List<string> FirstNameList = new List<string>();
+            List<string> LastNameList = new List<string>();
+
+       
+            randFirstName.Next(0, FirstNameList.Count - 1);
+            randLastName.Next(0, LastNameList.Count - 1);
+
+
+
+
         }
 
         private void SaveToolStripButton_Click(object sender, EventArgs e)
