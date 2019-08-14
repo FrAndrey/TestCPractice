@@ -50,6 +50,7 @@ namespace TestCPractice.Views
 
 
             }
+            MessageBox.Show("File saved succesfully","Saving",MessageBoxButtons.OK);
         }
 
         private void HelpToolStripButton_Click(object sender, EventArgs e)
