@@ -149,14 +149,16 @@ namespace TestCPractice.Views
         }
         private void GenerateSkillsButton_Click(object sender, EventArgs e)
         {
-            Random rand1 = new Random();
-            Random rand2 = new Random();
-            Random rand3 = new Random();
-            Random rand4 = new Random();
-            FirstDataLabel.Text = SkillList[rand1.Next(0, SkillList.Count - 1)];
-            SecondDataLabel.Text = SkillList[rand2.Next(0, SkillList.Count - 1)];
-            ThirdDataLabel.Text = SkillList[rand3.Next(0, SkillList.Count - 1)];
-            FourthDataLabel.Text = SkillList[rand4.Next(0, SkillList.Count - 1)];
+            Random rand = new Random();
+            int random1 = rand.Next(0, SkillList.Count - 1);
+            int random2 = rand.Next(0, SkillList.Count - 1);
+            int random3 = rand.Next(0, SkillList.Count - 1);
+            int random4 = rand.Next(0, SkillList.Count - 1);
+
+            FirstDataLabel.Text = SkillList[random1];
+            SecondDataLabel.Text = SkillList[random2];
+            ThirdDataLabel.Text = SkillList[random3];
+            FourthDataLabel.Text = SkillList[random4];
         }
 
         private void CharacterGenerator_Load(object sender, EventArgs e)
