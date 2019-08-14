@@ -217,7 +217,7 @@
             this.GenerateNameButton.TabIndex = 0;
             this.GenerateNameButton.Text = "Generate Name";
             this.GenerateNameButton.UseVisualStyleBackColor = true;
-            this.GenerateNameButton.Click += new System.EventHandler(this.GenerateNameButton_Click);
+            this.GenerateNameButton.Click += new System.EventHandler(this.GenerateNames);
             // 
             // Abilities
             // 

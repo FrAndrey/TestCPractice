@@ -69,18 +69,17 @@ namespace TestCPractice.Views
         }
 
 
-        private void GenerateNameButton_Click(object sender, EventArgs e)
+        private void GenerateNames(object sender, EventArgs e)
         {
-            // int randomIndex = rand.Next(0, MainTabControl.TabPages.Count - 1); 
+            LoadNames();
+            Random randFirst = new Random();
+            Random randLast = new Random();
+     
+            int randIndexForFirstName = randFirst.Next(0, FirstNameList.Count - 1);
+            int randIndexForLastName = randLast.Next(0, LastNameList.Count - 1);
 
-            List<string> FirstNameList = new List<string>();
-            List<string> LastNameList = new List<string>();
-
-       
-            randFirstName.Next(0, FirstNameList.Count - 1);
-            randLastName.Next(0, LastNameList.Count - 1);
-
-
+            FirstNameDataLabel.Text = FirstNameList[randIndexForFirstName];
+            LastNameDataLabel.Text = LastNameList[randIndexForLastName];
 
 
         }
