@@ -42,6 +42,9 @@ namespace TestCPractice.Views
             }
             
         }
+        /// <summary>
+        /// This is a method for LoadNames from text files
+        /// </summary>
         private void LoadNames()
         {  
             using (StreamReader inputStream = new StreamReader(
@@ -73,7 +76,11 @@ namespace TestCPractice.Views
             }
         }
 
-
+        /// <summary>
+        /// This is a method for generation names
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GenerateNames(object sender, EventArgs e)
         {
             LoadNames();
@@ -85,7 +92,7 @@ namespace TestCPractice.Views
 
             FirstNameDataLabel.Text = FirstNameList[randIndexForFirstName];
             LastNameDataLabel.Text = LastNameList[randIndexForLastName];
-            Program.identity 
+           // Program.identity 
 
 
         }
