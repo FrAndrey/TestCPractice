@@ -34,11 +34,11 @@
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.Identity = new System.Windows.Forms.TabPage();
             this.IdentityTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.LastNameLabel = new System.Windows.Forms.Label();
             this.FirstNameDataLabel = new System.Windows.Forms.Label();
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.LastNameDataLabel = new System.Windows.Forms.Label();
             this.GenerateNameButton = new System.Windows.Forms.Button();
+            this.LastNameLabel = new System.Windows.Forms.Label();
             this.Abilities = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.StrengthDataLabel = new System.Windows.Forms.Label();
@@ -53,6 +53,7 @@
             this.IntellectDataLabel = new System.Windows.Forms.Label();
             this.EducationDataLabel = new System.Windows.Forms.Label();
             this.SocialDataLabel = new System.Windows.Forms.Label();
+            this.GenerateAbilitiesButton = new System.Windows.Forms.Button();
             this.Skills = new System.Windows.Forms.TabPage();
             this.Character = new System.Windows.Forms.TabPage();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
@@ -70,7 +71,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.GenerateAbilitiesButton = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.Identity.SuspendLayout();
             this.IdentityTableLayout.SuspendLayout();
@@ -83,7 +83,7 @@
             // NextButton
             // 
             this.NextButton.Location = new System.Drawing.Point(443, 425);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(4);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(138, 44);
             this.NextButton.TabIndex = 0;
@@ -94,7 +94,7 @@
             // BackButton
             // 
             this.BackButton.Location = new System.Drawing.Point(16, 425);
-            this.BackButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(136, 44);
             this.BackButton.TabIndex = 0;
@@ -109,7 +109,7 @@
             this.MainTabControl.Controls.Add(this.Skills);
             this.MainTabControl.Controls.Add(this.Character);
             this.MainTabControl.Location = new System.Drawing.Point(4, 53);
-            this.MainTabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MainTabControl.Margin = new System.Windows.Forms.Padding(4);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
             this.MainTabControl.Size = new System.Drawing.Size(595, 341);
@@ -119,9 +119,9 @@
             // 
             this.Identity.Controls.Add(this.IdentityTableLayout);
             this.Identity.Location = new System.Drawing.Point(4, 24);
-            this.Identity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Identity.Margin = new System.Windows.Forms.Padding(4);
             this.Identity.Name = "Identity";
-            this.Identity.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Identity.Padding = new System.Windows.Forms.Padding(4);
             this.Identity.Size = new System.Drawing.Size(587, 313);
             this.Identity.TabIndex = 0;
             this.Identity.Text = "Identity";
@@ -140,7 +140,7 @@
             this.IdentityTableLayout.Controls.Add(this.GenerateNameButton, 2, 3);
             this.IdentityTableLayout.Controls.Add(this.LastNameLabel, 0, 1);
             this.IdentityTableLayout.Location = new System.Drawing.Point(4, 4);
-            this.IdentityTableLayout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IdentityTableLayout.Margin = new System.Windows.Forms.Padding(4);
             this.IdentityTableLayout.Name = "IdentityTableLayout";
             this.IdentityTableLayout.RowCount = 4;
             this.IdentityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -150,19 +150,6 @@
             this.IdentityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.IdentityTableLayout.Size = new System.Drawing.Size(605, 327);
             this.IdentityTableLayout.TabIndex = 0;
-            // 
-            // LastNameLabel
-            // 
-            this.LastNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LastNameLabel.Location = new System.Drawing.Point(4, 81);
-            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(143, 81);
-            this.LastNameLabel.TabIndex = 0;
-            this.LastNameLabel.Text = "Last Name";
-            this.LastNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FirstNameDataLabel
             // 
@@ -211,7 +198,7 @@
             // 
             this.IdentityTableLayout.SetColumnSpan(this.GenerateNameButton, 2);
             this.GenerateNameButton.Location = new System.Drawing.Point(306, 247);
-            this.GenerateNameButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GenerateNameButton.Margin = new System.Windows.Forms.Padding(4);
             this.GenerateNameButton.Name = "GenerateNameButton";
             this.GenerateNameButton.Size = new System.Drawing.Size(285, 62);
             this.GenerateNameButton.TabIndex = 0;
@@ -219,12 +206,25 @@
             this.GenerateNameButton.UseVisualStyleBackColor = true;
             this.GenerateNameButton.Click += new System.EventHandler(this.GenerateNames);
             // 
+            // LastNameLabel
+            // 
+            this.LastNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LastNameLabel.Location = new System.Drawing.Point(4, 81);
+            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LastNameLabel.Name = "LastNameLabel";
+            this.LastNameLabel.Size = new System.Drawing.Size(143, 81);
+            this.LastNameLabel.TabIndex = 0;
+            this.LastNameLabel.Text = "Last Name";
+            this.LastNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Abilities
             // 
             this.Abilities.Controls.Add(this.tableLayoutPanel1);
             this.Abilities.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Abilities.Location = new System.Drawing.Point(4, 24);
-            this.Abilities.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Abilities.Margin = new System.Windows.Forms.Padding(4);
             this.Abilities.Name = "Abilities";
             this.Abilities.Size = new System.Drawing.Size(587, 313);
             this.Abilities.TabIndex = 3;
@@ -252,7 +252,7 @@
             this.tableLayoutPanel1.Controls.Add(this.SocialDataLabel, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.GenerateAbilitiesButton, 2, 7);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 4);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -279,6 +279,7 @@
             this.StrengthDataLabel.Name = "StrengthDataLabel";
             this.StrengthDataLabel.Size = new System.Drawing.Size(87, 38);
             this.StrengthDataLabel.TabIndex = 0;
+            this.StrengthDataLabel.Text = " ";
             this.StrengthDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StrengthLabel
@@ -429,12 +430,24 @@
             this.SocialDataLabel.TabIndex = 0;
             this.SocialDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // GenerateAbilitiesButton
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.GenerateAbilitiesButton, 2);
+            this.GenerateAbilitiesButton.Location = new System.Drawing.Point(304, 278);
+            this.GenerateAbilitiesButton.Margin = new System.Windows.Forms.Padding(4);
+            this.GenerateAbilitiesButton.Name = "GenerateAbilitiesButton";
+            this.GenerateAbilitiesButton.Size = new System.Drawing.Size(269, 27);
+            this.GenerateAbilitiesButton.TabIndex = 0;
+            this.GenerateAbilitiesButton.Text = "Generate Abilities";
+            this.GenerateAbilitiesButton.UseVisualStyleBackColor = true;
+            this.GenerateAbilitiesButton.Click += new System.EventHandler(this.GenerateAbilitiesButton_Click);
+            // 
             // Skills
             // 
             this.Skills.Location = new System.Drawing.Point(4, 24);
-            this.Skills.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Skills.Margin = new System.Windows.Forms.Padding(4);
             this.Skills.Name = "Skills";
-            this.Skills.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Skills.Padding = new System.Windows.Forms.Padding(4);
             this.Skills.Size = new System.Drawing.Size(587, 313);
             this.Skills.TabIndex = 1;
             this.Skills.Text = "Skills";
@@ -443,7 +456,7 @@
             // Character
             // 
             this.Character.Location = new System.Drawing.Point(4, 24);
-            this.Character.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Character.Margin = new System.Windows.Forms.Padding(4);
             this.Character.Name = "Character";
             this.Character.Size = new System.Drawing.Size(587, 313);
             this.Character.TabIndex = 2;
@@ -518,13 +531,13 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "&Open";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -532,24 +545,24 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // helpToolStripMenuItem
@@ -563,7 +576,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.HelpToolStripButton_Click);
             // 
@@ -579,17 +592,6 @@
             this.MainMenuStrip.TabIndex = 2;
             this.MainMenuStrip.Text = "menuStrip1";
             // 
-            // GenerateAbilitiesButton
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.GenerateAbilitiesButton, 2);
-            this.GenerateAbilitiesButton.Location = new System.Drawing.Point(304, 278);
-            this.GenerateAbilitiesButton.Margin = new System.Windows.Forms.Padding(4);
-            this.GenerateAbilitiesButton.Name = "GenerateAbilitiesButton";
-            this.GenerateAbilitiesButton.Size = new System.Drawing.Size(269, 27);
-            this.GenerateAbilitiesButton.TabIndex = 0;
-            this.GenerateAbilitiesButton.Text = "Generate Abilities";
-            this.GenerateAbilitiesButton.UseVisualStyleBackColor = true;
-            // 
             // CharacterGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -600,7 +602,7 @@
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CharacterGenerator";
             this.Text = "Character Generator";
             this.MainTabControl.ResumeLayout(false);

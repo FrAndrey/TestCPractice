@@ -113,5 +113,23 @@ namespace TestCPractice.Views
 
             }
         }
+
+        private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
+        {
+            Random rand = new Random();
+            int random1 = rand.Next(0, 16);
+            int random2 = rand.Next(0, 16);
+            int random3 = rand.Next(0, 16);
+            int random4 = rand.Next(0, 16);
+            int random5 = rand.Next(0, 16);
+            int random6 = rand.Next(0, 16);
+
+            StrengthDataLabel.Text = random1.ToString();
+            DexDataLabel.Text = random2.ToString();
+            EnduranceDataLabel.Text = random3.ToString();
+            IntellectDataLabel.Text = random4.ToString();
+            EducationDataLabel.Text = random5.ToString();
+            SocialDataLabel.Text = random6.ToString();
+        }
     }
 }
