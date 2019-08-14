@@ -31,5 +31,12 @@ namespace TestCPractice.Views
             }
             
         }
+
+        private void GenerateNameButton_Click(object sender, EventArgs e)
+        {
+            Random rand = new Random();
+            //Here instead of tabcontrol should be numberOfLines of Names
+            int randomIndex = rand.Next(0, MainTabControl.TabPages.Count - 1); 
+        }
     }
 }
