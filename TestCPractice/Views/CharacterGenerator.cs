@@ -121,12 +121,12 @@ namespace TestCPractice.Views
             EducationDataLabel.Text = random5.ToString();
             SocialDataLabel.Text = random6.ToString();
 
-            Program.character.Strength = StrengthDataLabel.ToString();
-            Program.character.Dexterity = DexDataLabel.ToString();
-            Program.character.Endurance = EnduranceDataLabel.ToString();
-            Program.character.Intellect = IntellectDataLabel.ToString();
-            Program.character.Education = EducationDataLabel.ToString();
-            Program.character.SocialStanding = SocialDataLabel.ToString();
+        //    Program.character.Strength = StrengthDataLabel.ToString();
+        //    Program.character.Dexterity = DexDataLabel.ToString();
+       //     Program.character.Endurance = EnduranceDataLabel.ToString();
+        //    Program.character.Intellect = IntellectDataLabel.ToString();
+         //   Program.character.Education = EducationDataLabel.ToString();
+        //    Program.character.SocialStanding = SocialDataLabel.ToString();
         }
         private void LoadSkills()
         {
