@@ -42,10 +42,10 @@ namespace TestCPractice.Views
 
         private void SaveToolStripButton_Click(object sender, EventArgs e)
         {
-            using (StreamWriter outputString = new StreamWriter(
+            using (StreamWriter outputStream = new StreamWriter(
              File.Open("CharacterGen.txt", FileMode.Create)))
             {
-
+               // outputStream.WriteLine(Program.)
 
 
 
@@ -55,6 +55,18 @@ namespace TestCPractice.Views
         private void HelpToolStripButton_Click(object sender, EventArgs e)
         {
             Program.aboutBox.ShowDialog();
+        }
+
+        private void OpenToolStripButton_Click(object sender, EventArgs e)
+        {
+            using (StreamReader inputStream = new StreamReader(
+           File.Open("CharacterGen.txt", FileMode.Open)))
+            {
+               // inputStream.ReadLine\
+
+
+
+            }
         }
     }
 }
