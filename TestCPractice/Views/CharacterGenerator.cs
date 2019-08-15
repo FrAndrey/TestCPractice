@@ -28,7 +28,7 @@ namespace TestCPractice.Views
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            if (MainTabControl.SelectedIndex < MainTabControl.TabPages.Count -1)
+            if (MainTabControl.SelectedIndex < MainTabControl.TabPages.Count - 1)
             {
                 MainTabControl.SelectedIndex++;
             }
@@ -36,17 +36,17 @@ namespace TestCPractice.Views
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            if(MainTabControl.SelectedIndex != 0)
+            if (MainTabControl.SelectedIndex != 0)
             {
                 MainTabControl.SelectedIndex--;
             }
-            
+
         }
         /// <summary>
         /// This is a method for LoadNames from text files
         /// </summary>
         private void LoadNames()
-        {  
+        {
             using (StreamReader inputStream = new StreamReader(
          File.Open("firstNames.txt", FileMode.Open)))
             {
@@ -58,7 +58,7 @@ namespace TestCPractice.Views
                     counter++;
                 }
                 inputStream.Close();
-                inputStream.Dispose();        
+                inputStream.Dispose();
             }
 
             using (StreamReader inputLStream = new StreamReader(
@@ -86,13 +86,13 @@ namespace TestCPractice.Views
             LoadNames();
             Random randFirst = new Random();
             Random randLast = new Random();
-     
+
             int randIndexForFirstName = randFirst.Next(0, FirstNameList.Count - 1);
             int randIndexForLastName = randLast.Next(0, LastNameList.Count - 1);
 
             Program.character.Identity.FirstName = FirstNameDataLabel.Text = FirstNameList[randIndexForFirstName];
             Program.character.Identity.LastName = LastNameDataLabel.Text = LastNameList[randIndexForLastName];
-            
+
 
 
         }
@@ -105,7 +105,7 @@ namespace TestCPractice.Views
 
 
             var result = CharacterSaveFileDialog.ShowDialog();
-            if ( result != DialogResult.Cancel)
+            if (result != DialogResult.Cancel)
             {
                 using (StreamWriter streamWriter = new StreamWriter(
                     File.Open(CharacterSaveFileDialog.FileName, FileMode.Create)))
@@ -126,12 +126,12 @@ namespace TestCPractice.Views
                     streamWriter.Dispose();
 
                 }
-
+                MessageBox.Show("File saved succesfully", "Saving", MessageBoxButtons.OK);
             }
 
 
-            //MessageBox.Show("File saved succesfully","Saving",MessageBoxButtons.OK);
-     
+
+
         }
 
         private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
@@ -150,7 +150,7 @@ namespace TestCPractice.Views
             Program.character.Intellect = IntellectDataLabel.Text = random4.ToString();
             Program.character.Education = EducationDataLabel.Text = random5.ToString();
             Program.character.SocialStanding = SocialDataLabel.Text = random6.ToString();
-            
+
         }
         private void LoadSkills()
         {
@@ -197,7 +197,7 @@ namespace TestCPractice.Views
 
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (MainTabControl.SelectedIndex == 3)
+            if (MainTabControl.SelectedIndex == 3 && Program.character != null)
             {
                 FNameDataLabel.Text = Program.character.Identity.FirstName;
                 LNameDataLabel.Text = Program.character.Identity.LastName;
@@ -217,6 +217,44 @@ namespace TestCPractice.Views
 
             }
 
+        }
+
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CharacterOpenFileDialog.FileName = "Character.txt";
+            CharacterOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            CharacterOpenFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+
+
+            var result = CharacterOpenFileDialog.ShowDialog();
+            if (result != DialogResult.Cancel)
+            {
+                using (StreamReader streamReader = new StreamReader(
+                    File.Open(CharacterOpenFileDialog.FileName, FileMode.Open)))
+                {
+                    Program.character.Identity.FirstName = streamReader.ReadLine();
+                    Program.character.Identity.LastName = streamReader.ReadLine();
+                    Program.character.Dexterity = streamReader.ReadLine();
+                    Program.character.Education = streamReader.ReadLine();
+                    Program.character.Endurance = streamReader.ReadLine();
+                    Program.character.Intellect = streamReader.ReadLine();
+                    Program.character.SocialStanding = streamReader.ReadLine();
+                    Program.character.Strength = streamReader.ReadLine();
+                    Program.character.Skills.Add(streamReader.ReadLine());
+                    Program.character.Skills.Add(streamReader.ReadLine());
+                    Program.character.Skills.Add(streamReader.ReadLine());
+                    Program.character.Skills.Add(streamReader.ReadLine());
+
+
+                    streamReader.Close();
+                    streamReader.Dispose();
+
+
+                }
+                MessageBox.Show("File loaded succesfully");
+                MainTabControl.SelectedIndex = 3;
+
+            }
         }
     }
 }
