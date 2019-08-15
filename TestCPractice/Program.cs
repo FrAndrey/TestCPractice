@@ -32,7 +32,7 @@ namespace TestCPractice
             characterForm = new CharacterGenerator();
             aboutBox = new AboutBox();
             identity = new Identity();
-           // character = new CharacterPortfolio();
+            character = new CharacterPortfolio();
             
 
 
