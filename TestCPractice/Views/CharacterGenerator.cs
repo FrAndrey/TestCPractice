@@ -114,19 +114,14 @@ namespace TestCPractice.Views
             int random5 = rand.Next(0, 16);
             int random6 = rand.Next(0, 16);
 
-            StrengthDataLabel.Text = random1.ToString();
-            DexDataLabel.Text = random2.ToString();
-            EnduranceDataLabel.Text = random3.ToString();
-            IntellectDataLabel.Text = random4.ToString();
-            EducationDataLabel.Text = random5.ToString();
-            SocialDataLabel.Text = random6.ToString();
+            Program.character.Strength = StrengthDataLabel.Text = random1.ToString();
+            Program.character.Dexterity = DexDataLabel.Text = random2.ToString();
+            Program.character.Endurance = EnduranceDataLabel.Text = random3.ToString();
+            Program.character.Intellect = IntellectDataLabel.Text = random4.ToString();
+            Program.character.Education = EducationDataLabel.Text = random5.ToString();
+            Program.character.SocialStanding = SocialDataLabel.Text = random6.ToString();
 
-            Program.character.Strength = StrengthDataLabel.ToString();
-           Program.character.Dexterity = DexDataLabel.ToString();
-          Program.character.Endurance = EnduranceDataLabel.ToString();
-           Program.character.Intellect = IntellectDataLabel.ToString();
-           Program.character.Education = EducationDataLabel.ToString();
-          Program.character.SocialStanding = SocialDataLabel.ToString();
+ 
             
         }
         private void LoadSkills()
@@ -160,6 +155,10 @@ namespace TestCPractice.Views
             SecondDataLabel.Text = SkillList[random2];
             ThirdDataLabel.Text = SkillList[random3];
             FourthDataLabel.Text = SkillList[random4];
+            Program.character.Skills.Add(FirstDataLabel.Text);
+            Program.character.Skills.Add(SecondDataLabel.Text);
+            Program.character.Skills.Add(ThirdDataLabel.Text);
+            Program.character.Skills.Add(FourthDataLabel.Text);
         }
 
         private void CharacterGenerator_Load(object sender, EventArgs e)
@@ -176,6 +175,19 @@ namespace TestCPractice.Views
             {
                 FNameDataLabel.Text = Program.character.Identity.FirstName;
                 LNameDataLabel.Text = Program.character.Identity.LastName;
+
+                FirstSkillDataLabel.Text = Program.character.Skills[0];
+                SecondSkilDataLabel.Text = Program.character.Skills[1];
+                ThirdSkillDataLabel.Text = Program.character.Skills[2];
+                FourthSkillDataLabel.Text = Program.character.Skills[3];
+
+                StrDataLabel.Text = Program.character.Strength;
+                DexterityDataLabel.Text = Program.character.Dexterity;
+                EndDataLabel.Text = Program.character.Endurance;
+                EduDataLabel.Text = Program.character.Education;
+                SocialStDataLabel.Text = Program.character.SocialStanding;
+                IntDataLabel.Text = Program.character.Intellect;
+
 
             }
 

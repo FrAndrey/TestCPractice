@@ -26,16 +26,17 @@ namespace TestCPractice.Objects
         public string Intellect { get; set; }
         public string Education { get; set; }
         public string SocialStanding { get; set; }
+        public List<string> Skills { get; set; }
 
         //Skill List
 
-        List<Skill> Skills;
+       // List<Skill> Skills;
         
 
         public CharacterPortfolio()
         {
             //Construction
-            this.Skills = new List<Skill>();
+            this.Skills = new List<string>();
             this.Identity = new Identity();
             
         } 
