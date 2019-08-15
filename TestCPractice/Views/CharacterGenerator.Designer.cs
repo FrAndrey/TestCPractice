@@ -80,7 +80,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.FirstSkillDataLabel = new System.Windows.Forms.Label();
             this.SecondSkilDataLabel = new System.Windows.Forms.Label();
             this.ThirdSkillDataLabel = new System.Windows.Forms.Label();
             this.FourthSkillDataLabel = new System.Windows.Forms.Label();
@@ -90,6 +89,9 @@
             this.EduDataLabel = new System.Windows.Forms.Label();
             this.SocialStDataLabel = new System.Windows.Forms.Label();
             this.IntDataLabel = new System.Windows.Forms.Label();
+            this.LNameDataLabel = new System.Windows.Forms.Label();
+            this.FirstSkillDataLabel = new System.Windows.Forms.Label();
+            this.FNameDataLabel = new System.Windows.Forms.Label();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -105,8 +107,8 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.LNameDataLabel = new System.Windows.Forms.Label();
-            this.FNameDataLabel = new System.Windows.Forms.Label();
+            this.CharacterOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.CharacterSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.MainTabControl.SuspendLayout();
             this.Identity.SuspendLayout();
             this.IdentityTableLayout.SuspendLayout();
@@ -829,18 +831,6 @@
             this.label13.Text = "Fourth Skill";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FirstSkillDataLabel
-            // 
-            this.FirstSkillDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FirstSkillDataLabel.Location = new System.Drawing.Point(135, 92);
-            this.FirstSkillDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.FirstSkillDataLabel.Name = "FirstSkillDataLabel";
-            this.FirstSkillDataLabel.Size = new System.Drawing.Size(123, 46);
-            this.FirstSkillDataLabel.TabIndex = 0;
-            this.FirstSkillDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // SecondSkilDataLabel
             // 
             this.SecondSkilDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -948,6 +938,42 @@
             this.IntDataLabel.Size = new System.Drawing.Size(126, 51);
             this.IntDataLabel.TabIndex = 1;
             this.IntDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LNameDataLabel
+            // 
+            this.LNameDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LNameDataLabel.Location = new System.Drawing.Point(135, 46);
+            this.LNameDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LNameDataLabel.Name = "LNameDataLabel";
+            this.LNameDataLabel.Size = new System.Drawing.Size(123, 46);
+            this.LNameDataLabel.TabIndex = 0;
+            this.LNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FirstSkillDataLabel
+            // 
+            this.FirstSkillDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FirstSkillDataLabel.Location = new System.Drawing.Point(135, 92);
+            this.FirstSkillDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FirstSkillDataLabel.Name = "FirstSkillDataLabel";
+            this.FirstSkillDataLabel.Size = new System.Drawing.Size(123, 46);
+            this.FirstSkillDataLabel.TabIndex = 0;
+            this.FirstSkillDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FNameDataLabel
+            // 
+            this.FNameDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FNameDataLabel.Location = new System.Drawing.Point(135, 0);
+            this.FNameDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FNameDataLabel.Name = "FNameDataLabel";
+            this.FNameDataLabel.Size = new System.Drawing.Size(123, 46);
+            this.FNameDataLabel.TabIndex = 0;
+            this.FNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainToolStrip
             // 
@@ -1075,29 +1101,9 @@
             this.MainMenuStrip.TabIndex = 2;
             this.MainMenuStrip.Text = "menuStrip1";
             // 
-            // LNameDataLabel
+            // CharacterOpenFileDialog
             // 
-            this.LNameDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LNameDataLabel.Location = new System.Drawing.Point(135, 46);
-            this.LNameDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LNameDataLabel.Name = "LNameDataLabel";
-            this.LNameDataLabel.Size = new System.Drawing.Size(123, 46);
-            this.LNameDataLabel.TabIndex = 0;
-            this.LNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // FNameDataLabel
-            // 
-            this.FNameDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FNameDataLabel.Location = new System.Drawing.Point(135, 0);
-            this.FNameDataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.FNameDataLabel.Name = "FNameDataLabel";
-            this.FNameDataLabel.Size = new System.Drawing.Size(123, 46);
-            this.FNameDataLabel.TabIndex = 0;
-            this.FNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CharacterOpenFileDialog.FileName = "openFileDialog1";
             // 
             // CharacterGenerator
             // 
@@ -1212,5 +1218,7 @@
         private System.Windows.Forms.Label IntDataLabel;
         private System.Windows.Forms.Label LNameDataLabel;
         private System.Windows.Forms.Label FNameDataLabel;
+        private System.Windows.Forms.OpenFileDialog CharacterOpenFileDialog;
+        private System.Windows.Forms.SaveFileDialog CharacterSaveFileDialog;
     }
 }

@@ -99,8 +99,38 @@ namespace TestCPractice.Views
 
         private void SaveToolStripButton_Click(object sender, EventArgs e)
         {
-         
-            MessageBox.Show("File saved succesfully","Saving",MessageBoxButtons.OK);
+            CharacterSaveFileDialog.FileName = "Character.txt";
+            CharacterSaveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            CharacterSaveFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+
+
+            var result = CharacterSaveFileDialog.ShowDialog();
+            if ( result != DialogResult.Cancel)
+            {
+                using (StreamWriter streamWriter = new StreamWriter(
+                    File.Open(CharacterSaveFileDialog.FileName, FileMode.Create)))
+                {
+                    streamWriter.WriteLine(Program.character.Identity.FirstName);
+                    streamWriter.WriteLine(Program.character.Identity.LastName);
+                    streamWriter.WriteLine(Program.character.Dexterity);
+                    streamWriter.WriteLine(Program.character.Education);
+                    streamWriter.WriteLine(Program.character.Endurance);
+                    streamWriter.WriteLine(Program.character.Intellect);
+                    streamWriter.WriteLine(Program.character.SocialStanding);
+                    streamWriter.WriteLine(Program.character.Strength);
+                    foreach (var skill in Program.character.Skills)
+                    {
+                        streamWriter.WriteLine(skill);
+                    }
+                    streamWriter.Close();
+                    streamWriter.Dispose();
+
+                }
+
+            }
+
+
+            //MessageBox.Show("File saved succesfully","Saving",MessageBoxButtons.OK);
      
         }
 
@@ -120,8 +150,6 @@ namespace TestCPractice.Views
             Program.character.Intellect = IntellectDataLabel.Text = random4.ToString();
             Program.character.Education = EducationDataLabel.Text = random5.ToString();
             Program.character.SocialStanding = SocialDataLabel.Text = random6.ToString();
-
- 
             
         }
         private void LoadSkills()
@@ -164,8 +192,6 @@ namespace TestCPractice.Views
         private void CharacterGenerator_Load(object sender, EventArgs e)
         {
             LoadSkills();
-        
-
 
         }
 
