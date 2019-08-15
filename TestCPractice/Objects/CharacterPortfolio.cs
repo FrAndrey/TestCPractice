@@ -30,13 +30,14 @@ namespace TestCPractice.Objects
         //Skill List
 
         List<Skill> Skills;
+        
 
-       /* CharacterPortfolio()
+        public CharacterPortfolio()
         {
             //Construction
             this.Skills = new List<Skill>();
             this.Identity = new Identity();
             
-        } */
+        } 
     }
 }

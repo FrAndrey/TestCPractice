@@ -90,8 +90,8 @@ namespace TestCPractice.Views
             int randIndexForFirstName = randFirst.Next(0, FirstNameList.Count - 1);
             int randIndexForLastName = randLast.Next(0, LastNameList.Count - 1);
 
-            Program.identity.FirstName = FirstNameDataLabel.Text = FirstNameList[randIndexForFirstName];
-            Program.identity.LastName = LastNameDataLabel.Text = LastNameList[randIndexForLastName];
+            Program.character.Identity.FirstName = FirstNameDataLabel.Text = FirstNameList[randIndexForFirstName];
+            Program.character.Identity.LastName = LastNameDataLabel.Text = LastNameList[randIndexForLastName];
             
 
 
@@ -174,8 +174,8 @@ namespace TestCPractice.Views
         {
             if (MainTabControl.SelectedIndex == 3)
             {
-                FNameDataLabel.Text = Program.identity.FirstName;
-                LNameDataLabel.Text = Program.identity.LastName;
+                FNameDataLabel.Text = Program.character.Identity.FirstName;
+                LNameDataLabel.Text = Program.character.Identity.LastName;
 
             }
 
