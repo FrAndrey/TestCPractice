@@ -197,16 +197,17 @@ namespace TestCPractice.Views
 
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (MainTabControl.SelectedIndex == 3 && Program.character != null)
+            if (MainTabControl.SelectedIndex == 3)
             {
                 FNameDataLabel.Text = Program.character.Identity.FirstName;
                 LNameDataLabel.Text = Program.character.Identity.LastName;
-
-                FirstSkillDataLabel.Text = Program.character.Skills[0];
-                SecondSkilDataLabel.Text = Program.character.Skills[1];
-                ThirdSkillDataLabel.Text = Program.character.Skills[2];
-                FourthSkillDataLabel.Text = Program.character.Skills[3];
-
+                if (Program.character.Skills.Count != 0)
+                {
+                    FirstSkillDataLabel.Text = Program.character.Skills[0];
+                    SecondSkilDataLabel.Text = Program.character.Skills[1];
+                    ThirdSkillDataLabel.Text = Program.character.Skills[2];
+                    FourthSkillDataLabel.Text = Program.character.Skills[3];
+                }
                 StrDataLabel.Text = Program.character.Strength;
                 DexterityDataLabel.Text = Program.character.Dexterity;
                 EndDataLabel.Text = Program.character.Endurance;
