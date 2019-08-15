@@ -90,9 +90,9 @@ namespace TestCPractice.Views
             int randIndexForFirstName = randFirst.Next(0, FirstNameList.Count - 1);
             int randIndexForLastName = randLast.Next(0, LastNameList.Count - 1);
 
-            FirstNameDataLabel.Text = FirstNameList[randIndexForFirstName];
-            LastNameDataLabel.Text = LastNameList[randIndexForLastName];
-           // Program.identity 
+            Program.identity.FirstName = FirstNameDataLabel.Text = FirstNameList[randIndexForFirstName];
+            Program.identity.LastName = LastNameDataLabel.Text = LastNameList[randIndexForLastName];
+            
 
 
         }
@@ -171,26 +171,12 @@ namespace TestCPractice.Views
 
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (MainTabControl.SelectedIndex == 3)
+            {
+                FNameDataLabel.Text = Program.identity.FirstName;
+                LNameDataLabel.Text = Program.identity.LastName;
 
-        }
-
-        private void FirstSkillLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SecondSkillLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ThirdSkillLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FourthSkillLabel_Click(object sender, EventArgs e)
-        {
+            }
 
         }
     }

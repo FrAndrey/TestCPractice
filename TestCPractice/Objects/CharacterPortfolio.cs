@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.IO;
+using System.Diagnostics;
 /*
 Andrey Paramonov
 ID: 301038409
@@ -10,7 +13,7 @@ Descr: This is a main container class for an application
 */
 namespace TestCPractice.Objects
 {
-   public class CharacterPortfolio
+   public class CharacterPortfolio 
     {
         //Identity
         public Identity Identity { get; set; }
